@@ -27,6 +27,11 @@ void draw() {
 
   for (int i = 0; i < faces.length; i++) {
     println(faces[i].x + "," + faces[i].y);
+   
+   
+   //face
+    fill(210,180,140);
+    rect(faces[i].x+50,faces[i].y+40,150,160,150);
     
     
     //eyes
@@ -38,10 +43,6 @@ void draw() {
     fill(0,0,0);
     ellipse(faces[i].x+30, faces[i].y+40,15,15);
     ellipse(faces[i].x+80, faces[i].y+40,15,15);
-   
-   //a
-   fill(150,0,0);
-   rect(20,20,20,20,100);
    
    
    noFill();

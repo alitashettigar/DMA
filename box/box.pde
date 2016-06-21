@@ -8,6 +8,9 @@ stroke(0,0,255);
 translate(200, 200, 0); 
 rotateY(0.5);
 noFill();
-box(mouseX,mouseY,30);
+box(mouseX,mouseY,20);
+
+stroke(0,0,0);
+ellipse(mouseX,mouseY,60,60);
 
 }
