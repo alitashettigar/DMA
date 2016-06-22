@@ -4,11 +4,13 @@ void setup() {
 
 void draw() {
   background(255);
-  stroke(255, 50);
-  translate(200, 200, 0);
+  stroke(0);
+  translate(250, 250, 0);
   rotateX(mouseY * 0.05);
   rotateY(mouseX * 0.05);
-  fill(mouseX * 2, 0, 0);
-  sphereDetail(mouseX / 8);
-  sphere(80);
+  fill(255);
+  sphereDetail(mouseX/20);
+  sphere(190);
+  
+   
 }
