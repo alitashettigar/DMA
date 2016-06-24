@@ -11,11 +11,13 @@ void setup() {
 void draw() {
   //background
   background(181,238,255);
-  fill(255);
   strokeWeight(3);
+  stroke(0);
+  fill(2,144,7);
+  rect(-10,280,600,600);
   
   //upper torso + neck
-  fill(102,205,170);
+  fill(191,0,25);
   stroke(0);
   rect(150,250,240,200,280);
   stroke(0);
@@ -109,11 +111,8 @@ class Eye {
     noStroke();
     rect(mouseX+2,mouseY,15,25);
     rect(mouseX+38,mouseY,15,25);
-     
-     
-     //text
-    fill(0,0,255);
-    textSize(20);
-text("Move the mouse!", 200, 100); 
+
+    
+    
   }
 }
