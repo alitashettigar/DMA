@@ -4,8 +4,8 @@ int smallPoint, largePoint;
 void setup() {
   size(500, 500);
   img = loadImage("a.jpg");
-  smallPoint = 2;
-  largePoint = 5;
+  smallPoint = 3;
+  largePoint = 4;
   imageMode(CENTER);
   noStroke();
   background(255);
@@ -18,7 +18,6 @@ void draw() {
   color pix = img.get(x, y);
   fill(pix, 128);
   ellipse(x, y, pointillize, pointillize);
-  rect(x,y,pointillize,pointillize);
-   
-   
+  rect(x,y,pointillize,pointillize); 
+  triangle(x,y,x,y,x,y);
 }
