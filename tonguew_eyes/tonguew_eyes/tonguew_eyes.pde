@@ -2,17 +2,21 @@
 Eye e1, e2;
 
 void setup() {
-  size(640, 360);
+  size(560, 360);
   noStroke();
   e1 = new Eye( 220, 185, 45);
   e2 = new Eye( 320, 185, 45);
 }
 
 void draw() {
-  background(255);
-
+  //background
+  background(181,238,255);
+  fill(255);
+  strokeWeight(3);
+  
   //upper torso + neck
   fill(102,205,170);
+  stroke(0);
   rect(150,250,240,200,280);
   stroke(0);
   line(200,350,200,360);
@@ -21,6 +25,12 @@ void draw() {
   fill(222,184,135);
   ellipse(270,300,50,50);
   
+  //ears
+   fill(222,184,135);
+   ellipse(170,205,40,40);
+   ellipse(370,205,40,40);
+   
+   
   //body
   fill(222,184,135);
   rect(170,110,200,200,280);
@@ -33,7 +43,7 @@ void draw() {
    
    fill(222,184,135);
    noStroke();
-   rect(255,229,40,20);
+   rect(253,229,40,20);
     
     stroke(0);
     line(270,250,270,260);  
@@ -42,25 +52,7 @@ void draw() {
    strokeWeight(5);
    stroke(0);
    point(270,220);
-    
-   //object
-    fill(mouseX,50,mouseY); 
-    ellipse(mouseX,mouseY,50,40);
-    ellipse(mouseX+50,mouseY,50,40);
-    ellipse(mouseX+10,mouseY+25,40,30);
-    ellipse(mouseX+45,mouseY+25,40,30);  
    
-    fill(238,213,183);
-    rect(mouseX+18,mouseY-10,18,50,200);
-    
-    strokeWeight(5);
-    line(mouseX+25,mouseY-10,mouseX+5,mouseY-30);
-    line(mouseX+30,mouseY-10,mouseX+43,mouseY-30);
-    
-    //text
-    fill(0,0,255);
-    textSize(20);
-text("Move the mouse!", 202, 100); 
     
   e1.update(mouseX, mouseY);
   e2.update(mouseX, mouseY);
@@ -96,5 +88,32 @@ class Eye {
     fill(0, 0, 100);
     ellipse(size/4, 0, size/2, size/2);
     popMatrix();
+    
+       
+   //object
+    fill(mouseX,50,mouseY);
+     ellipse(mouseX+10,mouseY+25,40,30);
+    ellipse(mouseX+45,mouseY+25,40,30);  
+    ellipse(mouseX,mouseY,50,40);
+    ellipse(mouseX+50,mouseY,50,40);
+ 
+   
+    fill(mouseX,100,mouseY);
+    rect(mouseX+18,mouseY-10,18,50,200);
+    
+    strokeWeight(5);
+    line(mouseX+22,mouseY-10,mouseX+5,mouseY-30);
+    line(mouseX+30,mouseY-10,mouseX+45,mouseY-30);
+    
+   fill(mouseX,50,mouseY);
+    noStroke();
+    rect(mouseX+2,mouseY,15,25);
+    rect(mouseX+38,mouseY,15,25);
+     
+     
+     //text
+    fill(0,0,255);
+    textSize(20);
+text("Move the mouse!", 200, 100); 
   }
 }
