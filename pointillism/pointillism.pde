@@ -2,10 +2,10 @@ PImage img;
 int smallPoint, largePoint;
 
 void setup() {
-  size(500, 500);
+  size(300, 300);
   img = loadImage("a.jpg");
-  smallPoint = 2;
-  largePoint = 5;
+  smallPoint = 4;
+  largePoint = 7;
   imageMode(CENTER);
   noStroke();
   background(255);
@@ -18,7 +18,7 @@ void draw() {
   color pix = img.get(x, y);
   fill(pix, 128);
   ellipse(x, y, pointillize, pointillize);
-  rect(x,y,pointillize,pointillize);
+  
    
    
 }
